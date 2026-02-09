@@ -1,0 +1,99 @@
+
+@font-face {
+    font-family: 'HoneyPigeon';
+    src: url('fonts/HoneyPigeon.ttf');
+}
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: HoneyPigeon, sans-serif;
+}
+
+.wrapper {
+    width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.item {
+    border-radius: 7px;
+    background-color: #363433;
+    color: white;
+    padding: 1.5rem;
+    flex-basis: 100%;
+    width: 20rem;
+}
+
+.search {
+    display: flex;
+    gap: 1rem;
+}
+
+.text {
+    padding: 0.5rem;
+    border-radius: 7px;
+}
+
+.button {
+    padding: 0.5rem;
+    min-width: 4rem;
+    background-color: #f5372a;
+    color: white;
+    font-weight: 600;
+    border: solid 1px #f5372a;
+    border-radius: 7px;
+    transition: all 100ms ease-out;
+}
+.button:hover {
+    transform: scale(110%);
+}
+
+.display {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.sprite-wrapper {
+    display: flex;
+    background-color: white;
+    border-radius: 7px;
+    justify-content: center;
+    align-items: center;
+}
+
+.sprite {
+    display: none;
+    width: 200px;
+}
+
+.data {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.label {
+    background-color: #f5372a;
+    padding: 0.5rem;
+    border-radius: 7px;
+    max-width: 5rem;
+    text-align: center;
+    font-weight: 700;
+}
+
+.name, .types {
+    display: flex;
+    gap: 1rem;
+}
+
+.field {
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+}
