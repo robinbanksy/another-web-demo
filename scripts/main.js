@@ -16,13 +16,16 @@ async function getPokemon(name) {
     sprite.style.display = "block";
 
     typeOne.style.backgroundColor = "#ffffff00";
-    typeTwo.style.backgroundColor = "#ffffff00";
+    typeTwo.style.backgroundColor = "#ffffff00";``
 
     nameField.innerText = data.name.toUpperCase();
 
     if(data.types.length == 1) {
         typeOne.innerText = data.types[0].type.name.toUpperCase();
         typeTwo.style.display = "none";
+
+        typeOne.style.backgroundColor = getTypeColor(data.types[0].type.name);
+
     } else if(data.types.length == 2) {
         typeOne.innerText = data.types[0].type.name.toUpperCase();
         typeTwo.innerText = data.types[1].type.name.toUpperCase();
@@ -30,13 +33,13 @@ async function getPokemon(name) {
 
         typeOne.style.backgroundColor = getTypeColor(data.types[0].type.name);
         typeTwo.style.backgroundColor = getTypeColor(data.types[1].type.name);
-
-        typeField.forEach((field) => {
-            field.style.padding = "0.5rem";
-            field.style.width = "fit-content";
-            field.style.borderRadius = "0.5rem";
-        });
     }
+
+    typeField.forEach((field) => {
+        field.style.padding = "0.5rem";
+        field.style.width = "fit-content";
+        field.style.borderRadius = "0.5rem";
+    });
   
 }
 
